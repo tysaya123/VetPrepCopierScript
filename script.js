@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VetPrep Copier
 // @namespace    http://tampermonkey.net/
-// @version      2025-04-24
+// @version      v0.1.1
 // @description  Add buttons to copy questions and answer from the vetprep website
 // @author       You
 // @match        https://www.vetprep.com/*
