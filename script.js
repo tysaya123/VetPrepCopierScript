@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VetPrep Copier
 // @namespace    http://tampermonkey.net/
-// @version      v0.2.0
+// @version      v0.3.0
 // @description  Add buttons to copy questions and answer from the vetprep website
 // @author       You
 // @match        https://www.vetprep.com/*
@@ -23,7 +23,7 @@ function getQuestion() {
 
     let answersStr = ""
     const answers = document.getElementsByClassName('answer-list')[0].querySelectorAll('li')
-    answers.forEach((answer) => {answersStr += `\n * ${answer.innerText.replace(" Correct Answer","")}`})
+    answers.forEach((answer) => {answersStr += `\n * ${answer.innerText.replace(" Correct Answer","").replace(" Your Answer","")}`})
 
     return questions + answersStr
 }
