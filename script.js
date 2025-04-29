@@ -49,8 +49,14 @@ function addCopyBtn(label, getStrFunc) {
         navigator.clipboard.writeText(getStrFunc())
     };
 
-    let div = document.getElementById("btn-next").parentNode
-    div.appendChild(btn)
+    let nextBtn = document.getElementById("btn-next")
+    if (nextBtn) {
+        nextBtn.parentNode.appendChild(btn)
+    }
+    else {
+        let corinc = document.getElementsByClassName('corinc')[0]
+        corinc.appendChild(btn)
+    }
 }
 
 main()
